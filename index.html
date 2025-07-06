@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <h1 class="logo" onclick="navigateHome()">Blog Reader</h1>
+                    <div id="font-size-toggle" class="font-toggle">
+                        <span class="toggle-label">Font Size:</span>
+                        <button class="size-btn" data-size="small">Small</button>
+                        <button class="size-btn active" data-size="medium">Medium</button>
+                        <button class="size-btn" data-size="large">Large</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <main class="main-content">
+            <div class="container">
+
+                <div id="home-view" class="view">
+                    <div class="home-header">
+                        <h2 class="page-title">Latest Blog Posts</h2>
+                        <p class="page-description">Welcome to the blog reader! Click on any post below to read the full
+                            article.</p>
+                    </div>
+                    <div id="posts-container" class="posts-grid">
+                        <div class="loading">Loading posts...</div>
+                    </div>
+                </div>
+
+
+                <div id="post-view" class="view hidden">
+                    <div class="post-header">
+                        <button id="back-btn" class="back-button" onclick="navigateHome()">
+                            ← Back to Home
+                        </button>
+                    </div>
+                    <div id="post-content" class="post-content">
+                        <div class="loading">Loading post...</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>Built with HTML, CSS, and JavaScript - Demonstrating React Hook concepts</p>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
